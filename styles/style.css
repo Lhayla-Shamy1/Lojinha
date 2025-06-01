@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --primary-color: #921b88;      
+    --light-color: #FAF0E6;
+    --accent-color: #B9B4C7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Reddit Sans', sans-serif;
+}
+
+ul {
+    list-style-type: none
+}
+
+body {
+    background-color: #921b88; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    position: relative;
+    border-bottom: solid 2px var ;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 70px; /* ou 25px se quiser ainda menor */
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+
+
+/* Links de navegação */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Barra de pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 300px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    padding-right: 2.5rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: var(--light-color);
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #6D4D91;
+    cursor: pointer;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-login {
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: #ac2c90;
+    color: white;
+    border: none;
+    transition: all .3s;
+}
+
+.btn-login:hover {
+    cursor: pointer;
+    background-color: #8C4A6F; /* tom roxo escuro para hover */
+}
+
+/* LOGIN POP-UP */
+.login {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.login-form {
+    border-radius: 6px;
+    background-color: white;
+    max-width: 600px;
+    width: 100%;
+    padding: 15px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+    .menu-toggle {
+        display: block;
+        order: 2; /* vem depois da logo */
+    }
+
+    .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+    .search-container {
+        order: 4;
+        width: 100%;
+        margin-top: 1rem;
+        display: none;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        padding: 0.5rem 0;
+        border-top: 1px solid var(--secondary-color);
+    }
+
+    .btn-login {
+        order: 5;
+        width: 100%;
+    }
+
+    .login-container {
+        order: 5;
+        width: 100%;
+        margin-top: 1rem;
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .active {
+        display: flex !important;
+    }
+}
+
+
+/* Landing Page */
+
+.dropbtn {
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 10px; /* botão mais arredondado */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--primary-color);
+}
+
+.landing {}
