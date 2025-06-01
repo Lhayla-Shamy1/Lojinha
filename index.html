@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Flor de Lótus</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="#" class="logo">
+        <img src="Logotipo_clínica_integrada_pediatria_salmão__2_-removebg-preview.png" alt="Flor de Lótus" class="logo-img">
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#"><button class="dropbtn">Home</button></a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Alimentos</button>
+                    <div class="dropdown-content">
+                        <a href="#">Lamen</a>
+                        <a href="#">Mochi</a>
+                        <a href="#">Topokki</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#catalogo"><button class="dropbtn">Bebidas</button></a></li>
+            <li><a href="#contato"><button class="dropbtn">Contato</button></a></li>
+        </ul>
+        <div class="search-container" id="searchContainer">
+            <input type="text" class="search-input" placeholder="Busque aqui...">
+            <button class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="login-container" id="loginContainer">
+            <!-- <span></span>
+            <button class="btn-login" id="loginBtn" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i></button> -->
+            <!-- <button class="btn-login" id="loginBtn" onclick="openLoginWindow()">Login</button> -->
+        </div>
+    </nav>
+    <main>
+        <section class="landing" id="lading">
+        </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
+    <script src="./config/firebase.js"></script>
+    <script src="index.js"></script>
+    </script>
+</body>
+
+</html>
