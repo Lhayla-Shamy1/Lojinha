@@ -10,11 +10,13 @@
 </head>
 <body>
     <div class="login-container">
-        <div class="login-header">
-            <h1>
-                <h1 class="login-title">Login</h1>
+            <div class="login-header">
+            <h1 class="login-title">
+                <i class="fas fa-sun cute-icon"></i>
+                Login
+                <i class="fas fa-heart cute-icon"></i>
             </h1>
-        </div>
+            </div>
 
         <form class="login-form" onsubmit="event.preventDefault(); login()">
             <div class="input-group">
@@ -28,11 +30,8 @@
             </div>
 
             <button type="submit" class="login-btn">Login</button>
-            <hr class="line">
-            <div class="login-links">
-                <a href="#">Esqueceu a senha?</a>
-                <a href="#">Cadastre-se</a>
-            </div>
+          
+            
         </form>
     </div>
     <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
