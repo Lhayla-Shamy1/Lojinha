@@ -17,9 +17,10 @@ firebase.auth().onAuthStateChanged(user => {
     console.log(user)
     if (user) {
         loginContainer.innerHTML = `
-            <span>${user.email.split('@')[0]}</span>
-            <button class="btn-login" id="loginBtn" onclick="logout()">Logout</button>
+        <span>Olá, <strong>${user.displayName || user.email.split('@')[0]}</strong></span>
+        <button class="btn-login" id="loginBtn" onclick="logout()">Sair</button>
         `;
+
     } else {
         loginContainer.innerHTML = `
             <button class="btn-login" id="loginBtn" onclick="openLoginWindow()">Login</button>
