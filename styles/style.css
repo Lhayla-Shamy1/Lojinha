@@ -10,7 +10,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Reddit Sans', sans-serif;
+     font-family: 'Questrial', sans-serif;
 }
 
 ul {
@@ -45,7 +45,83 @@ body {
     object-fit: contain;
 }
 
+@keyframes glitter {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
 
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: glitter 5s linear infinite;
+    opacity: 0;
+}
+
+.glitter-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Brilhos não interferem com cliques */
+    overflow: hidden;
+}
+
+.glitter-container .glitter:nth-child(odd) {
+    animation-duration: 4s;
+}
+
+.glitter-container .glitter:nth-child(even) {
+    animation-duration: 6s;
+}
+@keyframes star-twinkle {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% { 
+        transform: scale(1.5);
+        opacity: 0.6;
+    }
+}
+
+.star {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: star-twinkle 3s linear infinite;
+    opacity: 0.8;
+}
+
+.star-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.star-container .star:nth-child(odd) {
+    animation-duration: 4s;
+}
+
+.star-container .star:nth-child(even) {
+    animation-duration: 5s;
+}
 
 
 /* Links de navegação */
@@ -65,6 +141,7 @@ body {
 .nav-links a:hover {
     color: var(--accent-color);
 }
+
 
 /* Barra de pesquisa */
 .search-container {
@@ -279,3 +356,4 @@ a {
     box-shadow: none ;
 }
 .landing {}
+
