@@ -18,12 +18,16 @@ body {
 }
 
 .login-container {
-    background-color: #8b2d77; /* substituído #5C5470 por um roxo médio */
+    background-color: rgba(255, 255, 255, 0.1); /* fundo branco com 10% de opacidade */
+    backdrop-filter: blur(10px); /* efeito vidro fosco */
+    -webkit-backdrop-filter: blur(10px); /* suporte para Safari */
     padding: 2rem;
     border-radius: 10px;
     width: 350px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* borda leve para dar definição */
 }
+
 
 .login-header {
     text-align: center;
@@ -113,4 +117,10 @@ body {
 
 .login-links a:hover {
     color: #FAF0E6;
+}
+.cute-icon {
+    color: #fbb1d9; /* rosa claro */
+    margin: 0 8px;
+    font-size: 1.5rem;
+    vertical-align: middle;
 }
